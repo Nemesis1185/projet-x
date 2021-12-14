@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DefaultController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,4 @@ use App\Http\Controllers\DefaultController;
 */
 
 Route::get('/', [DefaultController::class, 'home'])->name('homepage');
+Route::get('/event/{id}', [EventController::class, 'showEvent'])->name('event.showEvent');

@@ -2,8 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Laravel - @yield('title')</title>
+    <title>JDR - @yield('title')</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="{{ secure_asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,6 +19,12 @@
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Nouvel Évènement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Liste des Membres</a>
                         </li>
            
                     </ul>
