@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DefaultController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,9 @@ use App\Http\Controllers\DefaultController;
 */
 
 Route::get('/', [DefaultController::class, 'home'])->name('homepage');
+Route::get('/admin', [AdminController::class, 'index'])->name('admin');
+Route::get('/events/create', [AdminController::class, 'create'])->name('create');
+Route::post('/events/create', [AdminController::class, 'store'])->name('store');
+Route::get('/events/{id}/edit', [AdminController::class, 'edit'])->name('edit');
+Route::post('/events/{id}/edit', [AdminController::class, 'update'])->name('update');
+Route::get('/events/{id}/delete', [AdminController::class, 'delete'])->name('delete');

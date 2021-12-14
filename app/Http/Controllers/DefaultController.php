@@ -12,6 +12,5 @@ class DefaultController extends Controller
         return view('homepage', [
             'events'=>$events
             ]);
-        
         }
 }
