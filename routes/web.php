@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DefaultController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +16,9 @@ use App\Http\Controllers\DefaultController;
 */
 
 Route::get('/', [DefaultController::class, 'home'])->name('homepage');
+Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
+Route::get('/user/register', [UserController::class, 'register'])->name('register');
+Route::get('/user/login', [UserController::class, 'login'])->name('login');
+Route::post('/user/register', [UserController::class, 'signup'])->name('signup');
+Route::post('/user/login', [UserController::class, 'signin'])->name('signin');
+Route::get('/user/logout', [UserController::class, 'logout'])->name('logout');
