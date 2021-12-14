@@ -27,8 +27,23 @@
                             <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Liste des Membres</a>
                         </li>
            
+                         @auth
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{{ route('logout') }}">Déconnexion</a>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{{ route('login') }}">Connexion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="{{ route('register') }}">Inscription</a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
+                @auth
+                    <span class="navbar-text">Bonjour {{ auth()->user()->name }}</span>
+                @endauth
             </div>
         </nav>
     </header>
