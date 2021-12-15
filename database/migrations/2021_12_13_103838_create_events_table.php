@@ -18,11 +18,13 @@ class CreateEventsTable extends Migration
             $table->string('name',100);
             $table->timestamps();
             $table->string('address',100);
-            $table->string('duration');
+            $table->string('duration')->nullable();
             $table->string('day');
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->on('users')->references('id');
             $table->text('content');
+            $table->decimal('longitude', $precision = 9, $scale = 6)->nullable();
+            $table->decimal('latitude', $precision = 8, $scale = 6)->nullable();
             
         });
     }

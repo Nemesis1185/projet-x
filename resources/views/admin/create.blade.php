@@ -27,6 +27,8 @@
             <label for="addressInput">Adresse</label>
             <input value="{{ old('address') }}" type="text" class="form-control" name="addressInput" id="addressInput">
             <input type="text" id="address" name="address" class="form-control @error('address') is-invalid @enderror" hidden>
+             <input type="text" id="lon" name="longitude" class="form-control" hidden>
+             <input type="text" id="lat" name="latitude" class="form-control" hidden>
              <div class="col-6 proposition">
               <div class="adress-feedback">
                 <ul style="list-style-type: '- '"></ul>
