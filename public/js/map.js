@@ -1,6 +1,6 @@
 
             // On initialise la carte
-            var carte = L.map('maCarte').setView([48.852969, 2.349903], 13);
+            var carte = L.map('maCarte').setView([46.227638, 2.213749], 6);
             
             // On charge les "tuiles"
             L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
