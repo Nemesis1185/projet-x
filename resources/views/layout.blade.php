@@ -28,14 +28,14 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Accueil</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('map') }}">Carte des évènements</a>
+                        </li>
                            @auth
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="{{ route('admin') }}">Administration</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Nouvel Évènement</a>
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Liste des Membres</a>
                         </li>
