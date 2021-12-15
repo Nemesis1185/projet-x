@@ -15,7 +15,7 @@
                     <td>{{ $event->category->name }}</td>
                     <td>{{ $event->user->username }}</td>
                     <td>{{ $event->created_at->format('d/m/Y H:i') }}</td>
-                    <td><a href="{{ route('edit', ['id'=>$event->id]) }}">Modifier</a>|<a href="{{ route('delete', ['id'=>$event->id]) }}">Supprimer</a></td>
+                    <td>@if(auth()->user()->username === $event->user->username)<a href="{{ route('edit', ['id'=>$event->id]) }}">Modifier</a>|<a href="{{ route('delete', ['id'=>$event->id]) }}">Supprimer</a>@endif</td>
                 </tr>
                 @endforeach
                 

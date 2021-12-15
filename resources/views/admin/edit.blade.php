@@ -26,7 +26,7 @@
          <div class="form-group">
             <label for="addressInput">Adresse</label>
             <input value="{{ $event->address }}" type="text" class="form-control" name="addressInput" id="addressInput">
-            <input type="text" id="address" name="address" class="form-control @error('address') is-invalid @enderror" hidden>
+            <input value="{{ $event->address }}" type="text" id="address" name="address" class="form-control @error('address') is-invalid @enderror" hidden>
              <div class="col-6 proposition">
               <div class="adress-feedback">
                 <ul style="list-style-type: '- '"></ul>
@@ -45,7 +45,7 @@
         </div>
         <div class="form-group">
             <label for="day">Date</label>
-            <input value="{{ $event->day }}" type="text" class="form-control @error('day') is-invalid @enderror" name="day" id="day">
+            <input value="{{ $event->day }}" type="date" class="form-control @error('day') is-invalid @enderror" name="day" id="day">
             @error('day')
                 <div class="invalid-feedback">{{ $message }}</div>
             @enderror

@@ -52,6 +52,8 @@ class AdminController extends Controller
         $event->day = $request->input('day');
         $event->duration = $request->input('duration');
         $event->category_id = $request->input('category');
+        $event->longitude = $request->input('longitude');
+        $event->latitude = $request->input('latitude');
         
         // Mettre $event->user_id = auth()->user()->id;
         $event->user_id = auth()->user()->id;
