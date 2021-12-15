@@ -71,10 +71,6 @@
                 
                 <p> Calendrier</p>
                 
-                <div class="block"></div>
-                
-                <button class="btn" type="button" name="Create">Ajouter un évènement</button>
-                
 
     </section>
 

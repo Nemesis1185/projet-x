@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DefaultController;
-
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CommentController;
 
 
 /*
@@ -32,4 +32,5 @@ Route::post('/user/register', [UserController::class, 'signup'])->name('signup')
 Route::post('/user/login', [UserController::class, 'signin'])->name('signin');
 Route::get('/user/logout', [UserController::class, 'logout'])->name('logout');
 Route::get('/event/{id}', [EventController::class, 'showEvent'])->name('event.showEvent');
+Route::post('/comment/{id}', [CommentController::class, 'store'])->name('comments.store');
 
