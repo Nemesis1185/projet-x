@@ -36,7 +36,9 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Liste des Membres</a>
                         </li>
-           
+                        
+                        
+                      
                          
                             <li class="nav-item">
                                 <a class="nav-link" aria-current="page" href="{{ route('logout') }}">Déconnexion</a>
@@ -52,8 +54,10 @@
                     </ul>
                 </div>
                 @auth
-                    <span class="navbar-text">Bonjour {{ auth()->user()->name }}</span>
+                    <span class="navbar-text"><a href="{{ route("profil",["id"=>auth()->user()->id])}}">Bonjour {{ auth()->user()->username }}</a></span>
                 @endauth
+                
+                
             </div>
         </nav>
     </header>

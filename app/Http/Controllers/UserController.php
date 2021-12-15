@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
+
 class UserController extends Controller
 {
     public function login()
@@ -65,4 +66,15 @@ class UserController extends Controller
     
         return redirect()->route('homepage');
     }
+    
+    
+    public function profil(int $id)
+    {
+        $user = User::findOrFail($id);
+        
+        return view('profil', [
+            'user' => $user,
+        ]);
+    }
+
 }
