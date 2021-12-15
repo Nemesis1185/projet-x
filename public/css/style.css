@@ -79,3 +79,31 @@ h2 {
     top : 20px;
     background-color : #77b5fe;;
 }
+
+
+/*####################*CSS PROFIL BLADE (Cédric) #############*/
+
+
+h1{
+    text-align:center;
+    border : 4px gold solid;
+    box-shadow: rgb(46, 41, 59) 2px 5px 7px 2px;
+    max-width : 40%;
+    margin: auto;
+    margin-bottom : 10px;
+}
+
+
+.pseudo{
+    
+    border: 2px black solid;
+    box-shadow: rgb(46, 41, 59) 2px 5px 7px 2px;
+}
+
+.mail{
+    
+    border: 2px black solid;
+    box-shadow: rgb(46, 41, 59) 2px 5px 7px 2px;
+    
+}
+
